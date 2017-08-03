@@ -24,7 +24,7 @@ router.get('/posts',function (req,res) {
 
 // USAGE OF FB.api
 router.get('/postdata',function (req,res) {
-    FBB.api("/126976547314225/posts?fields=message,full_picture,created_time,shares,likes,",function (data,err) {
+    FBB.api("/126976547314225/posts?fields=message,full_picture,created_time,shares,likes",function (data,err) {
         if(err) throw err;
         var j=0,posts = [];
         for(j=0;j<data.data.length;j++)
