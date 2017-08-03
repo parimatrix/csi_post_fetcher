@@ -5,8 +5,8 @@ var mysql = require('mysql');
 
 var dbconfig = {
     host : 'localhost',
-    user : 'parimatrix',
-    password : '19011998',
+    user : 'username',
+    password : 'password',
     database: 'csidb'
 };
 
