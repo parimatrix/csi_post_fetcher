@@ -12,6 +12,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.4",
+    "fb": "^2.0.0",
     "mysql": "^2.14.0",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",

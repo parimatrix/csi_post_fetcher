@@ -19,7 +19,8 @@ function checkUser(req,res, next) {
 router.use(checkUser);
 
 router.get('/posts',function (req,res) {
-            res.sendfile(path.join(__dirname+'\\../public_static/postdata.html'));
+    //res.sendFile(path.join(__dirname+'\\../public_static/postdata.html'));
+    res.sendFile('postdata.html', {root : './public_static'});
 });
 
 // USAGE OF FB.api
@@ -31,7 +32,7 @@ router.get('/postdata',function (req,res) {
         {
             var singlepost = [];
             singlepost.push(data.data[j].id);
-            singlepost.push(data.data[j].message);
+            singlepost.push(data.data[j].message.replace(/[\u0800-\uFFFF]/g, ''));
             singlepost.push(data.data[j].created_time);
             posts.push(singlepost);
         }
